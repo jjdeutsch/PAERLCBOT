@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>ERLC Staff Dashboard</title>
+    <style>
+        body { background: #111; color: white; font-family: Arial; text-align: center; }
+        input, select, button { padding: 10px; margin: 5px; }
+        button { background: red; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>🚓 ERLC Staff Panel</h1>
+
+    <form action="/command" method="POST">
+        <select name="command">
+            <option value="fly">Fly</option>
+            <option value="bring">Bring</option>
+            <option value="goto">Goto</option>
+            <option value="freeze">Freeze</option>
+            <option value="heal">Heal</option>
+            <option value="revive">Revive</option>
+            <option value="kick">Kick</option>
+            <option value="ban">Ban</option>
+        </select>
+
+        <input type="text" name="target" placeholder="Target Username" required>
+        <input type="text" name="executor" placeholder="Your Name" required>
+
+        <button type="submit">Execute</button>
+    </form>
+</body>
+</html>
